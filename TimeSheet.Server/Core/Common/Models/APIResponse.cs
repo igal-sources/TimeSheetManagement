@@ -13,7 +13,6 @@ namespace TimeSheet.Server.Core.Common.Models
         public string ResponseMessage { get; set; } = string.Empty;
         public JToken ResponseData { get => _responseData; }
 
-
         public APIResponse()
         {
             _responseData = new JObject();
