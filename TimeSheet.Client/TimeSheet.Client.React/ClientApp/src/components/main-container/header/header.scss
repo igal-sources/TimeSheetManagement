@@ -1,0 +1,43 @@
+@import "../../../themes/generated/variables.base.scss";
+
+.header-headerStyle {
+  color: white;
+  background-color: var(--main-header-background-color) !important;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  height: 41px;
+  border-bottom: 1px solid #fff;
+}
+
+.header-toolbar-buttons {
+  width: 150px;
+  margin-left: 5px;
+}
+
+.header-box-item {
+  font-size: 1.25rem;
+  display: inline-block;
+  justify-content: space-between;
+}
+.header-app-box-item {
+  font-size: 1.25rem;
+  display: inline-block;
+  justify-content: space-between;
+}
+.header-product-box-item {
+  font-size: 1.25rem;
+  display: inline-block;
+}
+
+.toolbar-style {
+  padding-top: 2px;
+}
+
+.dx-toolbar-before {
+  left: 5px
+}
+.dx-toolbar-after {
+  right: 5px
+}

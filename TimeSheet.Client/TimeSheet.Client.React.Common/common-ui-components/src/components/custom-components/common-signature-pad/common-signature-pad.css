@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(238, 234, 234);
+}
+
+.signature-pad-container {
+  background-color: rgb(228, 212, 212);
+  width: 340px;
+  height: 140px;
+}
+
+.signature-pad-sigContainer {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.signature-pad-sigPad {
+  width: 100%;
+  height: 100%;
+}
+
+.signature-pad-buttons {
+  width: 100%;
+  height: 30px;
+}
+
+.signature-pad-sigImage {
+  background-size: 200px 50px;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+}
+
+.signatureCanvas {
+  border: 1px solid black;
+  width: 500px;
+  min-height: 200px;
+}

@@ -1,0 +1,1 @@
+powershell.exe -ExecutionPolicy Bypass -file StartStopServices.ps1 -action StopServices -$IsAdminUser 1

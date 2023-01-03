@@ -1,0 +1,20 @@
+.avatar-container {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: none;
+  border: 1px solid rgb(75, 63, 63);
+  line-height: 200px;
+  text-align: center;
+  object-fit: contain;
+  background: #f1f1eb;
+}

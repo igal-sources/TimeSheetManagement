@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project Form",
+  "description": "Project Form Descriptor",
+  "type": "object",
+  "required": ["projectName", "customerId"],
+  "properties": {
+    "projectId": { "type": "number" },
+    "customerId": { "type": "number" },
+    "projectName": {
+      "type": "string",
+      "title": "Project Name",
+      "minLength": 2,
+      "maxLength": 30
+    },
+    "hourlyRate": {
+      "type": "number",
+      "title": "Hourly Rate"
+    }
+  }
+}

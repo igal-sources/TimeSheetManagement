@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Working Hours Form",
+  "description": "Working Hours Form Descriptor",
+  "type": "object",
+  "required": ["projectId", "workingDate", "startTime", "endTime"],
+  "properties": {
+    "projectId": { "type": "number" },
+    "workingDate": {
+      "type": "string",
+      "title": "Working Date",
+      "format": "date"
+    },
+    "startTime": {
+      "type": "string",
+      "title": "Start Time"
+    },
+    "endTime": {
+      "type": "string",
+      "title": "End Time"
+    }
+  }
+}

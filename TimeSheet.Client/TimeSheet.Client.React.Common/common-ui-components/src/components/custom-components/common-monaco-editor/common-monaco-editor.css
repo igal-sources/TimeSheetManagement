@@ -1,0 +1,12 @@
+.monaco-editor-header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 5px 5px;
+  height: 3vh;
+}
+
+.monaco-editor-monaco-editor {
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}

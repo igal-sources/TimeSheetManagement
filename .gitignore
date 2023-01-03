@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+.vs/
+$tf/
+bin/
+obj/
+lib/
+Build/
+dist/
+node_modules
+
+*.user
+*.tgz
+*.vspscc
+package-lock.json
+/Sirius.Client/Sirus.Client.Web/ClientApp/out-tsc/e2e
+/DevOps/testlog.txt

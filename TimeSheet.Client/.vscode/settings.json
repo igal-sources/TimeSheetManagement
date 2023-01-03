@@ -1,0 +1,63 @@
+{
+  "editor.fontSize": 20,
+  "terminal.integrated.fontSize": 16,
+  "files.autoSaveDelay": 500,
+  "debug.console.fontSize": 16,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "prettier.printWidth": 110,
+  "editor.wordWrapColumn": 90,
+  "editor.semanticHighlighting.enabled": true,
+  "breadcrumbs.enabled": true,
+  "editor.renderWhitespace": "none",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  // "workbench.colorTheme": "One Dark Modern",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#745454",
+    "terminal.foreground": "#fcfcf6",
+    "editor.background": "#745454",
+    "editor.foreground": "#d4d4d4",
+    "editor.selectionBackground": "#fac4c4",
+    // "editor.selectionForeground": "#1d1b1b",
+    "editorIndentGuide.background": "#404040",
+    "editorRuler.foreground": "#333333",
+    "activityBarBadge.background": "#007acc",
+    "sideBarTitle.foreground": "#bbbbbb",
+    "sideBar.background": "#745454",
+    "sideBar.": "#534343",
+    "editorLineNumber.foreground": "#d4d4d4",
+    "editorLineNumber.activeForeground": "#916767"
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "cSpell.userWords": ["Igal", "Leibovich", "Twena", "פרטי"],
+  "files.autoSave": "afterDelay",
+  "reactSnippets.settings.prettierEnabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.enable": false,
+  "eslint.run": "onSave",
+  "gitlens.views.branches.branches.layout": "list",
+  "sync.gist": "c366f19000a6b82ab4c0f24480bdc92e",
+  "cSpell.words": ["archiver", "Documenta", "EXIF"],
+  "editor.foldingMaximumRegions": 500
+}

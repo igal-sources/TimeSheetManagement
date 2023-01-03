@@ -1,0 +1,33 @@
+.dx-popup-title {
+  background-color: var(--main-header-background-color);
+  font-family: "Verdana";
+  font-weight: 800;
+  font-size: 20px;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.dx-popup-content {
+  font-weight: 400;
+  font-size: 16px;
+  color: #336699;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.dx-dialog-button {
+  color: #ffffff;
+  background-color: #336699 !important;
+  border-color: #336699 !important;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.dx-dialog-button:hover {
+  color: #ffffff;
+  background-color: #99c1ec !important;
+  border-color: #e8f3ff !important;
+}

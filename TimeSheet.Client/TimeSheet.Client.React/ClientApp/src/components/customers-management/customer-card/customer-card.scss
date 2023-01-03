@@ -1,0 +1,23 @@
+.form-contact-card-form {
+  width: 600px;
+  height: 100%;
+  padding: 15px;
+  overflow: auto;
+}
+
+.DialogActions {
+  position: relative;
+  width: 100%;
+}
+.DialogActions button:first-child {
+  position: absolute;
+  left: 30px;
+  bottom: 10px;
+}
+
+.playground-grid-item {
+  height: 70vh;
+  width: 100%;
+  margin-right: 20px;
+  overflow: auto;
+}

@@ -1,0 +1,9 @@
+.DialogActions {
+  position: relative;
+  width: 100%;
+}
+.DialogActions button:first-child {
+  position: absolute;
+  left: 30px;
+  bottom: 10px;
+}

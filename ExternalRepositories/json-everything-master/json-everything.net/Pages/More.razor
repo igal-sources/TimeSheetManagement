@@ -1,0 +1,49 @@
+﻿@page "/json-more"
+@using JsonEverythingNet.Services
+@using Radzen
+@using Radzen.Blazor
+@using Json.More
+
+<PageTitle>Json.More.Net - json-everything.net</PageTitle>
+
+<div class="navbar">
+	<div class="align-items-center hstack mx-2">
+		<h1 class="display-4">JSON More</h1>
+		<div class="align-items-center mx-3">
+			Helpers and extended support for <code>System.Text.Json</code> models.
+		</div>
+	</div>
+	<div class="align-items-center mt-1">
+		@foreach (var library in _libraries)
+		{
+		    <NugetLibrary Library="library"/>
+		}
+	</div>
+</div>
+
+<div class="row my-4 mx-5">
+	<RadzenPanelMenu class="col-2" Click="SetPagePath">
+		<RadzenPanelMenuItem Text="Documentation" Icon="article" Value="@("json-more")"/>
+		<RadzenPanelMenuItem Text="Release Notes" Icon="format_list_numbered" Value="@("release-notes/json-more")"/>
+	</RadzenPanelMenu>
+	<div class="col-10">
+		<Docs @ref="_docs" Page="json-more"/>
+	</div>
+</div>
+
+@code {
+#pragma warning disable CS8618
+	private readonly List<LibraryVersion> _libraries = new()
+	{
+		LibraryVersion.GetFor<JsonElementEqualityComparer>(),
+	};
+	private Docs _docs;
+#pragma warning restore CS8618
+
+	private async Task SetPagePath(MouseEventArgs args)
+	{
+		if (args is not MenuItemEventArgs menuArgs) return;
+
+		await _docs.SetPage((string)menuArgs.Value);
+	}
+}

@@ -1,0 +1,90 @@
+@import "shared/css/main.scss";
+
+#root {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  background-image: linear-gradient(to top, #005f98, #a5dbfa) !important;
+}
+
+.App-main {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.App-header {
+  width: 100%;
+  top: 0;
+  background-color: var(--main-header-background-color) !important;
+  border-bottom: "1px solid #cccccc";
+  position: sticky;
+  z-index: 1;
+}
+
+.App-footer {
+  width: 100%;
+  position: fixed;
+  background-color: #f3e5f5;
+  border: 1px solid #ab47bc;
+  height: 3.3vh;
+  bottom: 0;
+  vertical-align: middle;
+}
+
+.footer-container {
+  height: 3.3vh;
+  line-height: 7px;
+  background-color: var(--main-header-background-color) !important;
+}
+
+.footer-buttons-container {
+  display: inline-block;
+}
+
+.footer-version {
+  color: white;
+  margin-right: 30px;
+}
+
+.footer-btn-bot-en {
+  margin-right: 16px;
+}
+
+.footer-btn-bot-he {
+  margin-right: 16px;
+}
+
+.dx-popup-title {
+  background-color: #17a2b8;
+  font-family: "Verdana";
+  font-weight: 800;
+  font-size: 20px;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.dx-popup-content {
+  font-weight: 400;
+  font-size: 16px;
+  color: #336699;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.dx-dialog-button {
+  color: #ffffff;
+  background-color: #336699 !important;
+  border-color: #336699 !important;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.dx-dialog-button:hover {
+  color: #ffffff;
+  background-color: #99c1ec !important;
+  border-color: #e8f3ff !important;
+}
