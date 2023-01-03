@@ -29,25 +29,23 @@ export const WorkingHourCard = ({ documentId, closeCard, confirmCard, actionType
 
   let ajv = createAjvInstance();
 
-  
   const getProjectsSelectList = async () => {
     const response = await fetchProjectsSelectList();
     if (response && response.responseStatusCode > 0) {
       console.log("fetchCustomerSelectList-error: ", response);
       return;
     }
-    
+
     setProjectList(response);
   };
-  
-  const initData = async () => {
 
+  const initData = async () => {
     const response = await fetchProjectsSelectList();
     if (response && response.responseStatusCode > 0) {
       console.log("fetchCustomerSelectList-error: ", response);
       return;
     }
-    
+
     setProjectList(response);
 
     switch (actionType) {
