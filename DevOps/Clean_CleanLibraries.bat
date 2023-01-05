@@ -1,16 +1,12 @@
-rmdir /s /q ..\Sirius.Client\Sirius.Client.React.Common\az-common-ui-components\node_modules\az-common-ui-components
-rmdir /s /q ..\Sirius.Client\Sirius.Client.React.Common\az-common-ui-components\node_modules\@rjfs\material-ui
-del /q ..\Sirius.Client\Sirius.Client.React.Common\az-common-ui-components\package-lock.json
+rmdir /s /q ..\TimeSheet.Client\TimeSheet.Client.React.Common\common-ui-components\node_modules\common-ui-components
+rmdir /s /q ..\TimeSheet.Client\TimeSheet.Client.React.Common\common-ui-components\node_modules\@rjfs\material-ui
+del /q ..\TimeSheet.Client\TimeSheet.Client.React.Common\common-ui-components\package-lock.json
 
-rmdir /s /q ..\Sirius.Client\Sirius.Client.React.Common\material-ui\node_modules\az-common-ui-components
-del /q ..\Sirius.Client\Sirius.Client.React.Common\material-ui\package-lock.json
+rmdir /s /q ..\TimeSheet.Client\TimeSheet.Client.React.Common\material-ui\node_modules\common-ui-components
+del /q ..\TimeSheet.Client\TimeSheet.Client.React.Common\material-ui\package-lock.json
 
-rmdir /s /q ..\Sirius.Client\Sirius.Client.React.MCT\ClientApp\node_modules\az-common-ui-components
-rmdir /s /q ..\Sirius.Client\Sirius.Client.React.MCT\ClientApp\node_modules\@rjfs\material-ui
-del /q ..\Sirius.Client\Sirius.Client.React.MCT\ClientApp\package-lock.json
-
-rmdir /s /q ..\Sirius.Client\Sirius.Client.React\ClientApp\node_modules\az-common-ui-components
-rmdir /s /q ..\Sirius.Client\Sirius.Client.React\ClientApp\node_modules\@rjfs\material-ui
-del /q ..\Sirius.Client\Sirius.Client.React\ClientApp\package-lock.json
+rmdir /s /q ..\TimeSheet.Client\TimeSheet.Client.React\ClientApp\node_modules\common-ui-components
+rmdir /s /q ..\TimeSheet.Client\TimeSheet.Client.React\ClientApp\node_modules\@rjfs\material-ui
+del /q ..\TimeSheet.Client\TimeSheet.Client.React\ClientApp\package-lock.json
 
 pause

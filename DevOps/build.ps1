@@ -39,29 +39,6 @@ $msbuild = $vs[0].installationPath + "\MSBuild\Current\Bin\MSBuild.exe"
 #"dotnet.exe msbuild" #instead of calling msbuild we can use   "dotnet.exe msbuild"
 $dotnet = "dotnet.exe"
 
-######################
-# DB Projects
-######################
-$DBProjects = @(
-    #[PSCustomObject]@{DatabaseName = 'DB1'; DataToInstall = 'systemData'}
-    [PSCustomObject]@{DatabaseName = 'siriusDB';  DataToInstall = 'DevData,SiriusInternalData'}
-)
-foreach ($item in $DBProjects) {
-		$DatabaseName = $item.DatabaseName
-		$DataToInstall = $item.DataToInstall
-		Write-Host "###### DatabaseName: $DatabaseName"
-		Write-Host "###### DataToInstall: $DataToInstall"
-
-}
-#exit
-$DBSolution = $root_repo_code + "..\repo-database\SiriusDB.sln"
-
-Write-Host "msbuild - $msbuild"
-Write-Host "dotnet - $dotnet"
-
-Write-Host "timeSheet_client_repo_code: "  $timeSheet_client_repo_code
-
-
 function StartProcess([string]$FileName , [string]$CommandArgs = "", [string]$WorkingDirectory="")
 {
 	
@@ -243,68 +220,6 @@ function BuildDb {
 	msbuild_compile -solutionFile $DBSolution -platform "Any CPU" -compilation "Release"
 }
 
-function DeployDB() {
-	# TODO: publish project to DB
-	[string] $DbsRootFolder = "$root_buildFolder\Database\DBs\"
-	[string] $DBInstallerWrapper = "$DbsRootFolder\DBInstallerWrapper.exe"
-	[string] $args
-	foreach ($item in $DBProjects) {
-		$DatabaseName = $item.DatabaseName
-		$DataToInstall = $item.DataToInstall
-		Write-Host "###### DatabaseName: $DatabaseName"
-		Write-Host "###### DataToInstall: $DataToInstall"
-
-		$ServerName = "."
-		$InstanceName = "sirius"
-		$LogDBDIR = "c:\mssql\data\$InstanceName\$DatabaseName"
-		$PrimaryDBDIR = "c:\mssql\data\$InstanceName\$DatabaseName"
-		$BackupDir = "c:\mssql\DBBackups\$InstanceName\$DatabaseName"
-		
-		$args = "-S $ServerName\$InstanceName -d master -f `"$DbsRootFolder\$DatabaseName\$DatabaseName" + "_Create.sql`" -v LogDBDir=`"$LogDBDir`" PrimaryDBDir=`"$PrimaryDBDir`" DatabaseName=$DatabaseName ProjectDirectory=`"$DbsRootFolder\$DatabaseName`"  DataPath=`"empty`" DataToInstall=`"$DataToInstall`""
-		
-		write-host "---------- Command ------------"
-		write-host "$DBInstallerWrapper $args"
-		write-host "---------- Command ------------"
-		
-		$process = Start-Process -FilePath $DBInstallerWrapper -ArgumentList $args -NoNewWindow -PassThru -Wait
-		if ($process.ExitCode -gt 0)
-		{
-			$ErrorMessage = "$_ exited with status code $($process.ExitCode)"
-			Write-error $ErrorMessage
-			Throw [System.Exception]$ErrorMessage
-		} 
-	
-	}
-}
-
-function DropDBs() {
-	# TODO: publish project to DB
-	[string] $DbsRootFolder = "$root_buildFolder\Database\DBs\"
-	[string] $DBInstallerWrapper = "$DbsRootFolder\DBInstallerWrapper.exe"
-	[string] $args
-	foreach ($item in $DBProjects) {
-		$DatabaseName = $item.DatabaseName
-		Write-Host "###### DatabaseName: $DatabaseName"
-
-		$ServerName = "."
-		$InstanceName = "sirius"
-		
-		$args = "-S $ServerName\$InstanceName -d master -r `"$DbsRootFolder\$DatabaseName\DropDbs.sql`" -v DatabaseName=$DatabaseName"
-		
-		write-host "---------- Command ------------"
-		write-host "$DBInstallerWrapper $args"
-		write-host "---------- Command ------------"
-		
-		$process = Start-Process -FilePath $DBInstallerWrapper -ArgumentList $args -NoNewWindow -PassThru -Wait
-		if ($process.ExitCode -gt 0)
-		{
-			$ErrorMessage = "$_ exited with status code $($process.ExitCode)"
-			Write-error $ErrorMessage
-			Throw [System.Exception]$ErrorMessage
-		} 
-		
-	}
-}
 #####################################################################################
 # MSBuild + dotnet.exe complie & Build Functions
 

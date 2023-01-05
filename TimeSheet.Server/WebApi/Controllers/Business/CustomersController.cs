@@ -3,7 +3,6 @@ using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using TimeSheet.Server.Core.Common.Models;
 using TimeSheet.Server.Customers.Common.Contracts;
-using TimeSheet.Server.Customers.Common.Models;
 
 namespace TimeSheet.Server.WebApi.Controllers.Business
 {
